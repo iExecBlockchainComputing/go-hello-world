@@ -9,4 +9,6 @@ FROM alpine:3.15
 RUN apk add --no-cache libgo
 RUN mkdir /iexec_in /iexec_out
 COPY --from=build /app/helloworld /app/helloworld
+ENV IEXEC_IN=/iexec_in
+ENV IEXEC_OUT=/iexec_out
 ENTRYPOINT ["/app/helloworld"]
