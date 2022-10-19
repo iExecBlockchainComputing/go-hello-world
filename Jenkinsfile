@@ -7,3 +7,11 @@ def nativeImage = buildSimpleDocker_v3(
     dockerfileDir: '.',
     visibility: 'iex.ec'
 )
+
+sconeBuildUnlocked(
+    nativeImage:     nativeImage,
+    imageName:       'go-hello-world',
+    imageTag:        buildInfo.imageTag,
+    sconifyArgsPath: 'scone/sconify.args',
+    sconifyVersion:  '5.7.1'
+)
