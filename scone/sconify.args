@@ -1,8 +1,6 @@
 --name=go-hello-world
 --from=${IMG_FROM}
 --to=${IMG_TO}
---binary-fs
---fs-dir=/
 --host-path=/etc/hosts
 --host-path=/etc/resolv.conf
 --binary=/app/helloworld
