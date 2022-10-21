@@ -38,7 +38,7 @@ Then the produced image is converted using `sconify.sh` script into
 a newly created TEE enabled image `tee-go-hello-world`:
 
 ### Build (conversion)
-The script can edited to change parameters like **heap size**, new
+The script can be edited to change parameters like **heap size**, new
 image name, sources folder, ...
 
 ```
@@ -60,7 +60,8 @@ docker run \
         -e IEXEC_IN=/iexec_in \
         -v /tmp/iexec_out:/iexec_out \
         -v $(pwd)/iexec_in:/iexec_in \
-        --device /dev/isgx \
+        --device /dev/sgx_enclave \
+        --device /dev/sgx_provision \
         tee-go-hello-world Alice
 ```
 To get the MREnclave value of the TEE application:
