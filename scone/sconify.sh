@@ -17,3 +17,6 @@ docker run -it --rm \
             --cli=$SCONE_IMG \
             --crosscompiler=$SCONE_IMG \
             $OPT
+
+echo
+docker run --rm -e SCONE_HASH=1 $IMG_TO
