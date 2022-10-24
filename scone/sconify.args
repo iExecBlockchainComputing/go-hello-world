@@ -1,0 +1,11 @@
+--name=go-hello-world
+--from=${IMG_FROM}
+--to=${IMG_TO}
+--host-path=/etc/hosts
+--host-path=/etc/resolv.conf
+--binary=/app/helloworld
+--heap=1G
+--dlopen=1
+--no-color
+--verbose
+--command="/app/helloworld"
